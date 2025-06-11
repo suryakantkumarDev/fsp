@@ -4,14 +4,13 @@ aiosmtplib==4.0.0
 altair==5.3.0
 annotated-types==0.7.0
 anyio==4.4.0
-async-timeout==5.0.1
+async-timeout==4.0.3
 attrs==23.2.0
 azure-core==1.32.0
 azure-storage-blob==12.24.1
 bcrypt==4.1.2
 bidict==0.23.1
 blinker==1.7.0
-blis==1.2.0
 boto3==1.34.130
 botocore==1.34.130
 cachetools==5.3.3
@@ -33,6 +32,7 @@ dnspython==2.6.1
 dotenv==0.9.9
 ecdsa==0.19.0
 email-validator==2.1.0.post1
+exceptiongroup==1.3.0
 Faker==37.1.0
 fastapi==0.109.2
 fastapi-cli==0.0.4
@@ -71,11 +71,6 @@ jsonpatch==1.33
 jsonpointer==3.0.0
 jsonschema==4.21.1
 jsonschema-specifications==2023.12.1
-langchain==0.2.17
-langchain-community==0.2.19
-langchain-core==0.2.43
-langchain-openai==0.2.8
-langchain-text-splitters==0.2.4
 langcodes==3.5.0
 langsmith==0.1.142
 language_data==1.3.0
@@ -102,7 +97,6 @@ packaging==24.0
 pandas==2.2.2
 passlib==1.7.4
 Pillow==10.1.0
-preshed==3.0.9
 proto-plus==1.24.0
 protobuf==4.25.3
 psycopg2-binary==2.9.10
@@ -111,9 +105,9 @@ pyasn1==0.4.8
 pyasn1_modules==0.4.0
 PyAudio==0.2.14
 pycparser==2.21
-pydantic==2.6.1
-pydantic-settings==2.8.1
-pydantic_core==2.16.2
+pydantic==2.11.5
+pydantic-settings==2.9.1
+pydantic_core==2.33.2
 pydeck==0.8.1b0
 pydub==0.25.1
 pygit2==1.15.1
@@ -157,9 +151,6 @@ smmap==5.0.1
 sniffio==1.3.1
 social-auth-core==4.5.3
 sounddevice==0.4.7
-spacy==3.8.4
-spacy-legacy==3.0.12
-spacy-loggers==1.0.5
 SQLAlchemy==2.0.25
 srsly==2.5.1
 starlette==0.36.3
@@ -168,7 +159,6 @@ stripe==11.6.0
 sympy==1.13.1
 telnyx==2.1.1
 tenacity==8.2.3
-thinc==8.3.4
 threadpoolctl==3.6.0
 tiktoken==0.8.0
 tokenizers==0.21.1

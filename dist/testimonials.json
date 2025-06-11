@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Georgia Marie",
+    "image": "/assets/Img/user1.svg",
+    "testimonial": "Few Shot Prep gave me the confidence I needed to nail my interview. The personalized feedback was incredibly detailed, and practicing with Thomas felt so real!"
+  },
+  {
+    "id": 2,
+    "name": "Liam Carter",
+    "image": "/assets/Img/user1.jpg",
+    "testimonial": "The AI interview felt natural and gave me insights into my performance that I never noticed before."
+  },
+  {
+    "id": 3,
+    "name": "Sophia Lane",
+    "image": "/assets/Img/user1.jpg",
+    "testimonial": "I was amazed at how well the system analyzed my responses. It helped me refine my communication skills significantly!"
+  }
+]

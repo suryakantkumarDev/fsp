@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Freemium Model",
+    "description": "Ideal for individuals who need quick access to basic features.",
+    "price": "0",
+    "features": [
+      { "text": "Basic access", "included": true },
+      { "text": "Limited storage", "included": true },
+      { "text": "No premium support", "included": false },
+      { "text": "Limited integrations", "included": false }
+    ]
+  },
+
+  {
+    "title": "Subscription-Based Model",
+    "description": "Ideal for individuals who need advanced features and tools for client work.",
+    "price": "25",
+    "features": [
+      { "text": "Advanced features", "included": true },
+      { "text": "Increased storage", "included": true },
+      { "text": "Priority support", "included": true },
+      { "text": "Some integrations", "included": false }
+    ]
+  },
+
+  {
+    "title": "Pay-As-You-Go Model",
+    "description": "Ideal for businesses who need personalized services and security for large teams.",
+    "price": "100",
+    "features": [
+      { "text": "All features included", "included": true },
+      { "text": "Unlimited storage", "included": true },
+      { "text": "24/7 support", "included": true },
+      { "text": "All integrations", "included": true }
+    ]
+  }
+]

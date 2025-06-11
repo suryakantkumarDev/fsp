@@ -1,0 +1,26 @@
+[
+  {
+    "question": "Is there a free trial available?",
+    "answer": "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."
+  },
+  {
+    "question": "Can I change my plan later?",
+    "answer": "Yes, you can change your plan at any time from your account settings."
+  },
+  {
+    "question": "What is your cancellation policy?",
+    "answer": "You can cancel anytime before the next billing cycle. No hidden fees."
+  },
+  {
+    "question": "Can other info be added to an invoice?",
+    "answer": "Yes, you can customize your invoice details from the billing section in your account."
+  },
+  {
+    "question": "How does billing work?",
+    "answer": "We charge on a monthly basis and provide invoices for all transactions."
+  },
+  {
+    "question": "How do I change my account email?",
+    "answer": "Go to your profile settings and update your email address."
+  }
+]

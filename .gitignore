@@ -20,12 +20,6 @@ __pycache__/
 *.so
 .Python
 
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-.installed.cfg
-*.egg
 
 # Unit test / coverage reports
 htmlcov/

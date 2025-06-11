@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ffffff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#121212"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="Professional application with responsive design for all screen sizes"
+    />
+    <title>Few Shot Prep</title>
+
+    <!-- Font optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;600&display=swap"
+      as="style"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+      crossorigin
+    />
+
+    <!-- Google Sign-In -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="89195448651-4r68o8gctfk81lm4c7jlcna3bejd203f.apps.googleusercontent.com" />
+
+    <!-- Logo favicon -->
+    <link
+      rel="icon"
+      href="../assets/Img/short-logo-dark.svg"
+      type="image/svg+xml"
+    />
+
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Base viewport settings */
+      :root {
+        --app-height: 100%;
+        --font-scale: 1;
+        --base-font-size: 16px;
+        --font-size-base: 1rem;
+        --primary-font: "Lato", -apple-system, BlinkMacSystemFont, system-ui,
+          sans-serif;
+        --heading-font: "Poppins", -apple-system, BlinkMacSystemFont, system-ui,
+          sans-serif;
+        --viewport-width: 100vw;
+        --viewport-height: 100vh;
+        --content-max-width: min(1440px, 95vw);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom);
+        color: #333;
+      }
+
+      /* High DPI Screen Adjustments */
+      @media screen and (min-resolution: 144dpi),
+        screen and (min-resolution: 1.5dppx) {
+        :root {
+          --font-scale: 0.9;
+        }
+      }
+
+      html {
+        height: 100vh;
+        height: var(--app-height);
+        height: -webkit-fill-available;
+        overflow: hidden;
+        font-size: calc(var(--base-font-size) * var(--font-scale));
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: none;
+        -webkit-overflow-scrolling: touch;
+        font-family: var(--primary-font);
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        text-rendering: optimizeSpeed;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Add explicit scroll showing */
+      html,
+      body {
+        overflow-y: visible !important;
+        overflow-x: hidden !important;
+        height: 100% !important;
+      }
+
+      /* Root container styling */
+      #root {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+        transform: none;
+      }
+
+      /* Ensure z-index stacking works */
+      .app {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--heading-font);
+        line-height: 1.2;
+      }
+
+      /* Content container */
+      .content-container {
+        width: var(--content-max-width);
+        margin: 0 auto;
+        padding: 0 clamp(1rem, 3vw, 2rem);
+      }
+
+      /* Media assets */
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Back to top button */
+      #back-to-top {
+        transition: all 0.3s ease;
+      }
+
+      #back-to-top:hover {
+        transform: translateY(-5px);
+        background-color: #333;
+      }
+
+      /* Infinity symbol */
+      #infinity {
+        position: relative;
+        width: 212px;
+        height: 100px;
+        box-sizing: content-box;
+      }
+
+      #infinity:before,
+      #infinity:after {
+        content: "";
+        box-sizing: content-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        border: 20px solid red;
+        border-radius: 50px 50px 0 50px;
+        transform: rotate(-45deg);
+      }
+
+      #infinity:after {
+        left: auto;
+        right: 0;
+        border-radius: 50px 50px 50px 0;
+        transform: rotate(45deg);
+      }
+
+      /* Role matching section */
+      .role-match-section {
+        margin: 2rem 0;
+        background-color: #f9f9f9;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .role-match-section h4 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      .role-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .role-bar-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .role-label {
+        flex: 0 0 150px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-transform: capitalize;
+      }
+
+      .role-bar-background {
+        flex: 1;
+        height: 8px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .role-bar-fill {
+        height: 100%;
+        background-color: #4a90e2;
+        border-radius: 4px;
+        transition: width 1s ease-out;
+      }
+
+      .role-score {
+        flex: 0 0 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: right;
+      }
+
+      /* Touch device optimizations */
+      @media (hover: none) and (pointer: coarse) {
+        .touch-target {
+          min-height: 44px;
+          min-width: 44px;
+          padding: clamp(0.5rem, 2vw, 1rem);
+        }
+      }
+
+      /* Device-specific media queries */
+      @media screen and (max-width: 360px) {
+        :root {
+          --base-font-size: 14px;
+        }
+      }
+
+      @media screen and (min-width: 361px) and (max-width: 480px) {
+        :root {
+          --base-font-size: 15px;
+        }
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        :root {
+          --base-font-size: 16px;
+        }
+
+        .role-bar-container {
+          flex-wrap: wrap;
+        }
+
+        .role-label {
+          flex: 0 0 100%;
+        }
+
+        .role-bar-background {
+          flex: 1 1 70%;
+        }
+
+        .role-score {
+          flex: 0 0 30%;
+          text-align: right;
+        }
+      }
+
+      /* Progressive enhancement */
+      @supports (height: 100dvh) {
+        html {
+          height: 100dvh;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      @media screen and (min-width: 1800px) or (min-height: 1200px) {
+        html {
+          font-size: calc(18px * var(--font-scale));
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-Dh6qIHNR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DZoWBsFt.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

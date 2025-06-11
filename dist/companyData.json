@@ -1,0 +1,44 @@
+{
+  "companyName": "InnovateTech Solutions",
+  "mission": "To empower businesses and individuals through innovative technology solutions that solve complex problems and drive measurable growth.",
+  "vision": "To be the global leader in creating transformative digital experiences that shape the future of industries and improve lives.",
+  "story": "Founded in 2015 by a group of passionate technologists, InnovateTech Solutions began as a small startup with big dreams. Our founders saw a gap in the market for truly innovative, client-focused technology solutions that could adapt to rapidly changing business environments. Starting with just five employees in a small office, we quickly gained recognition for our unique approach to solving complex problems through technology. Today, we've grown to over 500 employees across 12 countries, but we've never lost sight of our original mission: to create technology that makes a meaningful difference.",
+  "milestones": [
+    {
+      "id": 1,
+      "year": "2015",
+      "title": "Company Founded",
+      "description": "InnovateTech Solutions was established with a mission to transform how businesses leverage technology."
+    },
+    {
+      "id": 2,
+      "year": "2017",
+      "title": "First Major Client",
+      "description": "Secured our first Fortune 500 client, marking a significant milestone in our growth journey."
+    },
+    {
+      "id": 3,
+      "year": "2019",
+      "title": "International Expansion",
+      "description": "Opened our first international office in London, beginning our global expansion."
+    },
+    {
+      "id": 4,
+      "year": "2021",
+      "title": "Award-Winning Innovation",
+      "description": "Received industry recognition for our groundbreaking AI-powered analytics platform."
+    },
+    {
+      "id": 5,
+      "year": "2023",
+      "title": "Sustainability Initiative",
+      "description": "Launched our commitment to carbon-neutral operations and sustainable technology solutions."
+    },
+    {
+      "id": 6,
+      "year": "2025",
+      "title": "500 Employee Milestone",
+      "description": "Celebrated growing our global team to 500 talented professionals across 12 countries."
+    }
+  ]
+}
