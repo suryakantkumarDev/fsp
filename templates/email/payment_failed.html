@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Failed</title>
+    {% include "email/partials/styles.html" %}
+  </head>
+  <body>
+    {% include "email/partials/header.html" %}
+    <div class="container">
+      <h2>Payment Failed</h2>
+      <p>Hello {{ user_name }},</p>
+      <p>We encountered an issue processing your recent payment.</p>
+      
+      <div class="payment-details">
+        <h3>Payment Details:</h3>
+        <ul>
+          <li>Amount: ${{ amount }}</li>
+          <li>Plan: {{ plan_name }}</li>
+          <li>Date: {{ payment_date }}</li>
+          <li>Transaction ID: {{ transaction_id }}</li>
+        </ul>
+      </div>
+
+      <p>Possible reasons for the failure:</p>
+      <ul>
+        <li>Insufficient funds</li>
+        <li>Expired card</li>
+        <li>Incorrect payment information</li>
+        <li>Bank restrictions</li>
+      </ul>
+
+      <div class="button-container">
+        <a href="{{ payment_url }}" class="button">Update Payment Method</a>
+      </div>
+
+      <p>If you need assistance, please contact our support team.</p>
+    </div>
+    {% include "email/partials/footer.html" %}
+  </body>
+</html>
+    

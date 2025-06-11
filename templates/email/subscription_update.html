@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Update</title>
+    {% include "email/partials/styles.html" %}
+  </head>
+  <body>
+    {% include "email/partials/header.html" %}
+    <div class="container">
+      <h2>Subscription Update</h2>
+      <p>Hello {{ user_name }},</p>
+      <p>Your subscription has been updated successfully.</p>
+      
+      <div class="subscription-details">
+        <h3>New Subscription Details:</h3>
+        <ul>
+          <li>Plan: {{ plan_name }}</li>
+          <li>Price: ${{ plan_price }}</li>
+          <li>Billing Cycle: {{ billing_cycle }}</li>
+          <li>Effective Date: {{ effective_date }}</li>
+        </ul>
+      </div>
+
+      <p>Your new subscription benefits will take effect immediately.</p>
+      <div class="button-container">
+        <a href="{{ subscription_url }}" class="button">View Subscription Details</a>
+      </div>
+
+      <p>If you have any questions about your subscription or need assistance, please contact our support team.</p>
+      <p>Thank you for your continued support!</p>
+    </div>
+    {% include "email/partials/footer.html" %}
+  </body>
+</html>
+    

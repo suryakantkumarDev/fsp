@@ -1,0 +1,11 @@
+
+<div class="footer">
+  <p>&copy; {{ current_year }} {{ company_name|default('Your Company') }}. All rights reserved.</p>
+  <p>
+    <a href="{{ privacy_url|default('#') }}">Privacy Policy</a> | 
+    <a href="{{ terms_url|default('#') }}">Terms of Service</a> | 
+    <a href="{{ unsubscribe_url|default('#') }}">Unsubscribe</a>
+  </p>
+  <p class="address">{{ company_address|default('123 Main Street, City, State, ZIP') }}</p>
+</div>
+    

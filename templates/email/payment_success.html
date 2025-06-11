@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Successful</title>
+    {% include "email/partials/styles.html" %}
+  </head>
+  <body>
+    {% include "email/partials/header.html" %}
+    <div class="container">
+      <h2>Payment Successful!</h2>
+      <p>Hello {{ user_name }},</p>
+      <p>Your payment has been processed successfully.</p>
+      
+      <div class="payment-details">
+        <h3>Payment Details:</h3>
+        <ul>
+          <li>Amount: ${{ amount }}</li>
+          <li>Plan: {{ plan_name }}</li>
+          <li>Date: {{ payment_date }}</li>
+          <li>Transaction ID: {{ transaction_id }}</li>
+        </ul>
+      </div>
+
+      <p>Your subscription has been activated and you now have full access to all features.</p>
+      <div class="button-container">
+        <a href="{{ dashboard_url }}" class="button">Go to Dashboard</a>
+      </div>
+
+      <p>If you have any questions, please don't hesitate to contact our support team.</p>
+      <p>Thank you for choosing us!</p>
+    </div>
+    {% include "email/partials/footer.html" %}
+  </body>
+</html>
+    

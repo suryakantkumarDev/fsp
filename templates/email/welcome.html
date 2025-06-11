@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Our Service</title>
+    {% include "email/partials/styles.html" %}
+  </head>
+  <body>
+    {% include "email/partials/header.html" %}
+    <div class="container">
+      <h2>Welcome to Our Service!</h2>
+      <p>Hello {{ user_name }},</p>
+      <p>Thank you for creating an account with us. We're excited to have you on board!</p>
+      <p>With your new account, you can:</p>
+      <ul>
+        <li>Access all our premium features</li>
+        <li>Manage your subscriptions</li>
+        <li>Update your profile information</li>
+      </ul>
+      <div class="button-container">
+        <a href="{{ dashboard_url }}" class="button">Go to Dashboard</a>
+      </div>
+      <p>If you have any questions or need assistance, please don't hesitate to contact our support team.</p>
+      <p>Best regards,</p>
+      <p>The Team</p>
+    </div>
+    {% include "email/partials/footer.html" %}
+  </body>
+</html>
+    

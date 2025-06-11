@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+    {% include "email/partials/styles.html" %}
+  </head>
+  <body>
+    {% include "email/partials/header.html" %}
+    <div class="container">
+      <h2>Email Verification</h2>
+      <p>Hello {{ user_name }},</p>
+      <p>Please verify your email by clicking the button below:</p>
+      <div class="button-container">
+        <a href="{{ verification_url }}" class="button">Verify Email</a>
+      </div>
+      <p>If the button doesn't work, copy and paste this link:</p>
+      <p class="link">{{ verification_url }}</p>
+      <p>Thank you for joining us!</p>
+    </div>
+    {% include "email/partials/footer.html" %}
+  </body>
+</html>
+    
